@@ -7,6 +7,6 @@ The code requires Python (3.6+ and was tested with 3.7.6) and the following depe
 
 ## Acknowledging this work
 
-If you publish any work based on the contents of this repository please cite ([CITATION file](./CITATION)):
+If you publish any work based on the contents of this repository please cite:
 
 Lei, I. M. et al. (2022). A hackable, multi-functional, and modular extrusion 3D printer for soft materials. _Scientific Reports_. 

@@ -8,10 +8,10 @@ Codes and CAD designs of the 3D printed parts generated in the article 'A hackab
 
 ## Structure of the repository
 ### CAD Files
-- Contain the CAD designs and the stl files of all the customised parts of the printer (i.e., frame, printhead heater, printhead, stage heater and stages)
+- Contains the CAD designs and the stl files of all the customised parts of the printer (i.e., frame, printhead heater, printhead, stage heater and stages)
 
 ### Codes 
-- Contain the codes for the heating operation and the printing operation. 
+- Contains the codes for the heating operation and the printing operation. 
 
 ## Acknowledging this work
 If you publish any work based on the contents of this repository please cite:

@@ -37,7 +37,32 @@ def coordinateTransfer(x, y, a, b, r):
     yarm = yroot - r * np.sin(theta)
 
     return np.around([xarm, yarm], decimals=2)
+
     
+def map_plane(x_print, y_print, e_print, x_plane, y_plane, z_plane, Z0):
+    eps = 0.2
+    output = []
+    for x, y, e in zip(x_print, y_print, e_print):
+        out = []
+        has_value = False
+        for i, (x_base, y_base, z_base) in enumerate(zip(x_plane, y_plane, z_plane)):
+            if x_base - eps <= x <= x_base + eps:
+                if y_base - eps <= y <= y_base + eps:
+                    out.append([x, y, z_base, e])
+                    has_value = True
+
+        if has_value == True:
+            z = [w[2] for w in out]
+            min_index = z.index(np.nanmin(z))
+            output.append(out[min_index])
+    
+        else: 
+            output.append([x,y,Z0,e])
+            
+    return output
+
+
+
 #  example
 if __name__ == '__main__':
     x = [0]  # mm

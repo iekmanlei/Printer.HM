@@ -11,7 +11,7 @@ imported to test_picture.py for printing operation.
 
 import gcodemod
 import gcodemod_inkscape 
-import transform as transform
+import transform_rot as transform
 import numpy as np
 import matplotlib.pyplot as plt 
 from mpl_toolkits.mplot3d import Axes3D
@@ -37,6 +37,7 @@ y_gcode_i = inkscape_coor[:, 1] # Import y coord from gcode file
 z_gcode_i = inkscape_coor[:, 2] # Import z coord from gcode file
 e_gcode_i = inkscape_coor[:, 3] # Import extrusion information from gcode file
 
+
 out = transform.map_plane(x_gcode_i, y_gcode_i, e_gcode_i, x_gcode, y_gcode, z_gcode, Z0)
 out_x = [w[0] for w in out]
 out_y = [w[1] for w in out]
@@ -44,7 +45,7 @@ out_z = [w[2] for w in out]
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
-ax.scatter(x_gcode[::50], y_gcode[::50], z_gcode[::50], alpha=0.1)
+ax.scatter(x_gcode[::5], y_gcode[::5], z_gcode[::5], alpha=0.1)
 ax.scatter(out_x, out_y, out_z, color='r')
 fig.show()
 # Output a text file that can be imported to text_picture.py for printing
